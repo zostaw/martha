@@ -1,0 +1,5 @@
+.python-version
+conversation_history.txt
+models/
+test.py
+venv
