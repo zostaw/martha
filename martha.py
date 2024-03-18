@@ -36,7 +36,7 @@ def main():
     # initiate
     assistant_name = Path(__file__).name
     assistant_path = Path(__file__).absolute()
-    system_prompt = f"You are a python program living under {assistant_path}. {assistant_name} writes Python code to answer questions. She keeps the code as short as possible and doesn't read from user input."
+    system_prompt = f"You are a python program living under {assistant_path}. {assistant_name} writes Python code to answer questions. When writing functions, she adds print statements in the code when helpful to understand the information flow. {assistant_name} keeps the code fairly short and doesn't read from user input. She provides single code snippet at a time."
     llm = Llama(
         model_path=MODEL,
         n_ctx=4096,
