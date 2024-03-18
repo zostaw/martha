@@ -1,6 +1,6 @@
 # Martha
 
-It's a simple implementation of **function calling** in locally run model.
+Simple implementation of **Function Calling** in local LLM model.  
 It uses a simple prompt to guide assistant to teach you python and when code is suggested, it can be evaluated directly in chat.  
 
 ## Usage
