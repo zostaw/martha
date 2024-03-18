@@ -1,19 +1,28 @@
 # Martha
 
 Simple demonstration of **Function Calling** in local LLM model.  
+It's commandline chat interface to model.  
 It uses a simple prompt to guide assistant to teach you python and when code is suggested, it can be evaluated directly in chat.  
+The program stores history of conversation.
+
+Supported format: *GGUF*
+
 
 ## Usage
 
-1. Adjust path to MODEL in martha.py (by default it's looking under: *./models/openhermes-2.5-mistral-7b-16k.Q5_K_M.gguf*)
 
-2. Execute:
+1. Download LLM chat model, i.e. [OpenHermes 2.5 Mistral 7B](https://huggingface.co/TheBloke/OpenHermes-2.5-Mistral-7B-GGUF/blob/main/openhermes-2.5-mistral-7b.Q5_0.gguf) from Hugging Face.
+
+2. Adjust model path in martha.py (by default it's looking under: *./models/openhermes-2.5-mistral-7b-16k.Q5_K_M.gguf*)
+
+3. Execute:
 
 ```python
 ./martha.py
 ```
 
-3. Ask question about python code. 
+Begin conversation...
+
 ```
 user:
 ```
