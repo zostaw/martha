@@ -29,9 +29,9 @@ user:
 
 ## Example conversation
 
-> In below example **bold** statements are written by user, the *rest* (including provided code and output) is output of the program.
+In below example **bold** statements are written by user, the *rest* (including provided code and output) is output of the program.
 
-
+###### Conversation
 
 *user:* **What are list comprehensions?**  
 *assistant: List comprehensions are a concise way to create lists in Python by combining a loop and a conditional statement into a single line of code. They provide an efficient and readable way to generate new lists based on existing lists or other iterable objects. Here's an example:*  
