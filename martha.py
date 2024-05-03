@@ -9,6 +9,7 @@ import subprocess
 
 CONVERSATION_FILE = Path("conversation_history.txt")
 MODEL="./models/openhermes-2.5-mistral-7b-16k.Q5_K_M.gguf"
+#MODEL="./models/Meta-Llama-3-8B-Instruct.Q5_K_M.gguf"
 
 def run_python_code(code):
     if not isinstance(code, str):
@@ -37,6 +38,7 @@ def main():
     assistant_name = Path(__file__).name
     assistant_path = Path(__file__).absolute()
     system_prompt = f"You are a python program living under {assistant_path}. {assistant_name} writes Python code to answer questions. When writing functions, she adds print statements in the code when helpful to understand the information flow. {assistant_name} keeps the code fairly short and doesn't read from user input. She provides single code snippet at a time."
+    # Mistral parameters
     llm = Llama(
         model_path=MODEL,
         n_ctx=4096,
@@ -45,6 +47,16 @@ def main():
         chat_format="chatml",
         n_gpu_layers=1,
     )
+
+    # Llama3 paremeters
+    # llm = Llama(
+    #     model_path=MODEL,
+    #     n_ctx=2048,
+    #     temperature=0.2,
+    #     verbose=False,
+    #     chat_format="chatml",
+    #     n_gpu_layers=1,
+    # )
 
     
     if CONVERSATION_FILE.is_file():
